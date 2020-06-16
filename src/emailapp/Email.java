@@ -24,11 +24,9 @@ public class Email {
 		
 		//set random password
 		this.password = randomPassword(defaultPasswordLength);
-		System.out.print("\nRandom Password: "+ this.password );
 		
 		//set email
-		email = this.setEmail();
-		System.out.print("\nYour new email is: "+ this.email );
+		email = this.setEmail();;
 	}
 	
 	//SET Methods ---------------------------------------------------------------------------
@@ -66,6 +64,7 @@ public class Email {
 	
 	//GET methods ---------------------------------------------------------------------------
 	public String getFullName() {return this.firstName + " " + this.lastName;}
+	public String getDepartment(){ return this.department; }
 	public String getEmail(){ return this.email; }	
 	public int getMailboxCapacity(){ return this.mailboxCapacity; }	
 	public String getAlternateEmail(){ return this.alternateEmail; }
@@ -86,6 +85,10 @@ public class Email {
 	
 	public void ShowInfo() {
 		
-		System.out.println("\nDISPLAY NAME:" + this.getFullName() +"\nCOMPANY EMAIL:"+this.getEmail() + "\nMAILBOX CAPACITY:" + this.getMailboxCapacity() + " MB");
+		System.out.println("\nDISPLAY NAME:" + this.getFullName() 
+		+"\nDEPARTMENT:"+this.getDepartment()
+		+"\nCOMPANY EMAIL:"+this.getEmail()
+		+"\nPASSWORD:"+this.getPassword()
+		+"\nMAILBOX CAPACITY:" + this.getMailboxCapacity() + " MB");
 	}
 }
